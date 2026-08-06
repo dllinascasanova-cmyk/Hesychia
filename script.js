@@ -107,7 +107,7 @@ Talla: ${talla}`;
 
 `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
-        window.open(url,"_blank");
+        window.location.href = url;
 
         formulario.reset();
 

@@ -97,7 +97,7 @@ Quiero realizar el siguiente pedido.
 
 Nombre: ${nombre}
 
-Dirección: ${dirección}
+Ciudad: ${ciudad}
 
 Diseño: ${producto}
 

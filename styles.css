@@ -1,0 +1,1270 @@
+/*==================================================
+HESYCHIA.CAT
+Premium Store
+==================================================*/
+
+:root{
+
+    --bg:#F6F3EE;
+    --white:#ffffff;
+    --black:#111111;
+    --gray:#6e6e6e;
+    --line:#dfdbd4;
+
+    --title:'Cormorant Garamond', serif;
+    --text:'Manrope', sans-serif;
+
+    --container:1400px;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:var(--black);
+
+    font-family:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+section{
+
+    width:100%;
+
+}
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:82px;
+
+    padding:0 70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    z-index:999;
+
+    transition:.35s;
+
+    background:rgba(246,243,238,.82);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(0,0,0,.04);
+
+}
+
+.logo{
+
+    font-size:1rem;
+
+    letter-spacing:4px;
+
+    font-weight:700;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+nav a{
+
+    font-size:.82rem;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:1px;
+
+    background:#111;
+
+    transition:.35s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+.header-right{
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+}
+
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+
+    max-width:var(--container);
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
+    align-items:center;
+
+    padding-top:82px;
+
+}
+
+.hero-left{
+
+    padding-left:70px;
+
+}
+
+.hero-small{
+
+    letter-spacing:4px;
+
+    font-size:.8rem;
+
+    color:#777;
+
+    margin-bottom:30px;
+
+}
+
+.hero h1{
+
+    font-family:var(--title);
+
+    font-size:6.3rem;
+
+    font-weight:600;
+
+    line-height:.95;
+
+}
+
+.hero-description{
+
+    margin-top:35px;
+
+    font-size:1.2rem;
+
+    color:#666;
+
+    max-width:420px;
+
+    line-height:1.8;
+
+}
+
+.hero-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:45px;
+
+    padding:18px 42px;
+
+    border:1px solid var(--black);
+
+    font-size:.85rem;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+
+}
+
+.hero-button:hover{
+
+    background:#111;
+
+    color:white;
+
+}
+
+.scroll-indicator{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:80px;
+
+    letter-spacing:3px;
+
+    font-size:.72rem;
+
+    color:#777;
+
+}
+
+.scroll-indicator span{
+
+    width:60px;
+
+    height:1px;
+
+    background:#999;
+
+}
+
+.hero-right{
+
+    height:calc(100vh - 82px);
+
+    overflow:hidden;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .8s;
+
+}
+
+.hero-right:hover img{
+
+    transform:scale(1.03);
+
+}
+/*==================================================
+SECTION HEADINGS
+==================================================*/
+
+.collection{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:140px 70px;
+
+}
+
+.section-heading{
+
+    margin-bottom:90px;
+
+}
+
+.section-heading p{
+
+    font-size:.8rem;
+
+    letter-spacing:4px;
+
+    color:var(--gray);
+
+    margin-bottom:18px;
+
+}
+
+.heading-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:30px;
+
+}
+
+.heading-row h2{
+
+    font-family:var(--title);
+
+    font-size:4rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+}
+
+.view-all{
+
+    font-size:.8rem;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.view-all:hover{
+
+    opacity:.6;
+
+}
+
+
+
+/*==================================================
+PRODUCTOS
+==================================================*/
+
+.product-card{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    margin-bottom:170px;
+
+}
+
+.product-card:last-child{
+
+    margin-bottom:0;
+
+}
+
+.product-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.product-number{
+
+    font-size:.8rem;
+
+    letter-spacing:4px;
+
+    color:#999;
+
+    margin-bottom:18px;
+
+}
+
+.product-info h3{
+
+    font-family:var(--title);
+
+    font-size:3.5rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+}
+
+.line{
+
+    width:90px;
+
+    height:1px;
+
+    background:var(--line);
+
+    margin:30px 0;
+
+}
+
+.price{
+
+    font-size:1rem;
+
+    color:var(--gray);
+
+    margin-bottom:40px;
+
+}
+
+.buy-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:180px;
+
+    height:55px;
+
+    border:1px solid var(--black);
+
+    letter-spacing:2px;
+
+    font-size:.82rem;
+
+    transition:.35s;
+
+}
+
+.buy-link:hover{
+
+    background:var(--black);
+
+    color:var(--white);
+
+}
+
+.product-image{
+
+    overflow:hidden;
+
+    border-radius:2px;
+
+    background:#ece8e2;
+
+}
+
+.product-image img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:transform .7s ease;
+
+}
+
+.product-card:hover .product-image img{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/*==================================================
+ALTERNAR POSICIÓN DEL SEGUNDO PRODUCTO
+==================================================*/
+
+.product-card:nth-child(even){
+
+    grid-template-columns:1fr 340px;
+
+}
+
+.product-card:nth-child(even) .product-info{
+
+    order:2;
+
+    text-align:right;
+
+    align-items:flex-end;
+
+}
+
+.product-card:nth-child(even) .product-image{
+
+    order:1;
+
+}
+
+
+
+/*==================================================
+ESPACIADO ENTRE SECCIONES
+==================================================*/
+
+.collection + .history{
+
+    margin-top:60px;
+
+}
+/*==================================================
+HISTORIA
+==================================================*/
+
+.history{
+
+    max-width:1400px;
+    margin:0 auto;
+    padding:140px 70px;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:90px;
+    align-items:center;
+
+}
+
+.history-image{
+
+    overflow:hidden;
+    border-radius:2px;
+    background:#e9e5df;
+
+}
+
+.history-image img{
+
+    width:100%;
+    height:720px;
+    object-fit:cover;
+    transition:.7s;
+
+}
+
+.history:hover .history-image img{
+
+    transform:scale(1.03);
+
+}
+
+.history-content span{
+
+    display:block;
+    margin-bottom:22px;
+
+    letter-spacing:4px;
+
+    font-size:.8rem;
+
+    color:#777;
+
+}
+
+.history-content h2{
+
+    font-family:var(--title);
+
+    font-size:4rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+    margin-bottom:35px;
+
+}
+
+.history-content p{
+
+    font-size:1rem;
+
+    color:#666;
+
+    line-height:2;
+
+    max-width:470px;
+
+    margin-bottom:45px;
+
+}
+
+.history-content a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:190px;
+
+    height:58px;
+
+    border:1px solid #111;
+
+    letter-spacing:2px;
+
+    font-size:.82rem;
+
+    transition:.35s;
+
+}
+
+.history-content a:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+
+
+/*==================================================
+PEDIDO
+==================================================*/
+
+.order-section{
+
+    background:#111;
+
+    padding:140px 20px;
+
+    margin-top:120px;
+
+}
+
+.order-container{
+
+    width:100%;
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.section-heading.center{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-heading.center p{
+
+    color:#bcbcbc;
+
+}
+
+.section-heading.center h2{
+
+    color:white;
+
+    font-family:var(--title);
+
+    font-size:3.5rem;
+
+    font-weight:600;
+
+}
+
+.order-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.input-group{
+
+    width:100%;
+
+}
+
+.order-form input,
+.order-form select{
+
+    width:100%;
+
+    height:64px;
+
+    padding:0 22px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:transparent;
+
+    color:white;
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.order-form input::placeholder{
+
+    color:#9c9c9c;
+
+}
+
+.order-form select{
+
+    color:#d6d6d6;
+
+}
+
+.order-form option{
+
+    color:#111;
+
+}
+
+.order-form input:focus,
+.order-form select:focus{
+
+    border-color:white;
+
+}
+
+.order-form button{
+
+    margin-top:20px;
+
+    height:66px;
+
+    border:none;
+
+    background:white;
+
+    color:#111;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.order-form button:hover{
+
+    background:#ececec;
+
+}
+
+
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    background:#0a0a0a;
+
+    color:white;
+
+    padding:80px 70px 35px;
+
+}
+
+.footer-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+    padding-bottom:50px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer-logo h2{
+
+    font-family:var(--title);
+
+    font-size:2.7rem;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.footer-logo p{
+
+    color:#a8a8a8;
+
+    line-height:1.9;
+
+    max-width:420px;
+
+}
+
+.footer-links,
+.footer-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.footer-links a,
+.footer-social a{
+
+    color:#cfcfcf;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+
+    color:white;
+
+}
+
+.footer-bottom{
+
+    max-width:1400px;
+
+    margin:35px auto 0;
+
+    text-align:center;
+
+    color:#7d7d7d;
+
+    font-size:.9rem;
+
+}
+/*==================================================
+ANIMACIONES
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-left,
+.hero-right,
+.section-heading,
+.product-card,
+.history,
+.order-container{
+
+    animation:fadeUp .9s ease both;
+
+}
+
+
+/*==================================================
+HEADER SCROLL
+==================================================*/
+
+.header.scrolled{
+
+    background:rgba(246,243,238,.96);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+}
+
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f4f1ec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#b8b2aa;
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#918a81;
+
+}
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+    .hero{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero-left{
+
+        padding:120px 50px 60px;
+
+    }
+
+    .hero-right{
+
+        height:700px;
+
+    }
+
+    .collection,
+    .history{
+
+        padding:100px 50px;
+
+    }
+
+}
+
+
+@media (max-width:900px){
+
+    .header{
+
+        padding:0 25px;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+    .header-right{
+
+        display:none;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+    .hero-description{
+
+        max-width:100%;
+
+    }
+
+    .hero-right{
+
+        height:520px;
+
+    }
+
+    .heading-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .heading-row h2{
+
+        font-size:3rem;
+
+    }
+
+    .product-card{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        margin-bottom:100px;
+
+    }
+
+    .product-card:nth-child(even){
+
+        grid-template-columns:1fr;
+
+    }
+
+    .product-card:nth-child(even) .product-info{
+
+        order:1;
+
+        align-items:flex-start;
+
+        text-align:left;
+
+    }
+
+    .product-card:nth-child(even) .product-image{
+
+        order:2;
+
+    }
+
+    .history{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .history-image img{
+
+        height:450px;
+
+    }
+
+    .history-content h2{
+
+        font-size:3rem;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+    }
+
+}
+
+
+@media (max-width:600px){
+
+    .logo{
+
+        font-size:.9rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .hero-left{
+
+        padding:110px 25px 40px;
+
+    }
+
+    .hero h1{
+
+        font-size:3rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1rem;
+
+    }
+
+    .hero-button{
+
+        width:100%;
+
+    }
+
+    .scroll-indicator{
+
+        display:none;
+
+    }
+
+    .collection{
+
+        padding:70px 25px;
+
+    }
+
+    .history{
+
+        padding:70px 25px;
+
+    }
+
+    .order-section{
+
+        padding:90px 25px;
+
+    }
+
+    footer{
+
+        padding:60px 25px 25px;
+
+    }
+
+    .heading-row h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .history-content h2{
+
+        font-size:2.4rem;
+
+    }
+
+    .section-heading.center h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+/*==================================================
+HOVER SOLO PC
+==================================================*/
+
+@media (hover:hover){
+
+    .buy-link:hover,
+    .hero-button:hover,
+    .history-content a:hover{
+
+        transform:translateY(-2px);
+
+    }
+
+}
+
+
+/*==================================================
+SELECCIÓN
+==================================================*/
+
+::selection{
+
+    background:#111;
+
+    color:white;
+
+}
